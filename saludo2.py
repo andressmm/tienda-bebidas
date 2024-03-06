@@ -1,2 +1,4 @@
-nombre= "jorgita gomez"
+nombre= "jorgita"
 print(nombre)
+apellido="gomez"
+print(apellido)
