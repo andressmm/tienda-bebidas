@@ -1,0 +1,1428 @@
+/* ----NORMALIZACION ----*/
+*{
+    margin:0;
+    padding:0;
+    font-family: "Montserrat";
+    box-sizing: border-box;  
+    font-size:16px;  
+    list-style: none;
+    text-decoration: none;
+}
+
+/* ----COLORES ----*/
+:root {
+    --color-fondo: #222; 
+    --color-fondo-2:#444;
+    --color-fondo-3:#292929;
+    --color-detalles:#3fd;
+    --color-sombras:#9999;
+    --color-textos:#3FB7EE;
+}
+
+
+/*---- INDEX.HTML----*/
+.bodyInicio{
+    background: var(--color-fondo);
+    color:var(--color-textos);
+    display:grid;
+    grid-template-areas:
+    "encab encab encab"
+    "naveg naveg naveg"
+    "cuerp cuerp cuerp"
+    "cuerp cuerp cuerp"
+    "cuerp cuerp cuerp"
+    "foote foote foote";
+}
+
+main{
+    grid-area: cuerp;
+    margin: auto; 
+    width: 70vw;    
+
+}
+
+h3{
+    position:relative;
+    margin: auto; 
+    text-align:center;
+    margin-top: 15px;
+    font-size:medium;
+    color:var(--color-textos)
+    
+
+}
+
+nav{
+
+        background: var(--color-fondo);
+        grid-area: naveg;
+        white-space: nowrap; /* evita que el texto vaya a doble linea ante cambios de pantalla */
+    
+}
+    
+.encabezado{
+    background: var(--color-fondo);
+    height: auto;
+    grid-area: encab;
+    display: flex;
+    flex-direction: row;
+}
+    
+.previo{
+    width: 10px;
+    flex-grow: 3;
+}
+    
+.titulo_sitio{ /* div que contiene titulo del sitio */
+    padding:10px;
+    font-size:2em;
+    flex-grow: 2;
+    margin-right:auto;
+    display: flex;
+    align-items: center;
+}
+    
+.logo{
+    height: 30px;
+}
+    
+.tit{
+    font-size: inherit;
+    margin-left:10px;
+}
+
+.tit a{ /* titulo del sitio */
+    font-size: inherit;
+    text-decoration: none;
+    color:var(--color-textos)    
+}
+    
+.tit a{
+    font-size: inherit;
+}
+
+/* boton navegacion y barra nav */
+
+.boton_mobile_plus{
+    border-radius: 6px;
+    /*border:1px solid #ccc1;*/
+    padding:5px 30px;
+    font-size: 2.5em;
+    font-weight: 250; 
+    transition:0.3s;
+    margin-left: auto;
+    display:none;
+    color:var(--color-textos);
+}
+
+
+
+.barra_nav{
+    display:flex;
+    /*list-style: none;*/
+    justify-content: center;  
+}
+
+.barra_nav li{
+    padding:10px 30px;   
+}
+
+.barra_nav li i{
+    box-sizing:border-box;
+    text-align:right;
+    margin-right: 9px;
+}
+
+.navegacion_mobile{
+    display:none;
+    border-top:1px solid var(--color-textos);
+    background: linear-gradient(to bottom, var(--color-fondo) 10%,var(--color-fondo-2) 90%); /*var(--color-fondo);*/  
+    transition:opacity 0.2s;
+    box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.52);
+    z-index:1200;
+}
+
+li a{ 
+color: var(--color-textos);}
+
+a:visited {
+    color: var(--color-textos);
+}
+
+a:hover{
+    color: var(--color-detalles);
+}
+
+.barra_nav li:hover{
+    transform: translateY(-2px);
+    text-shadow: 2px 2px 15px var(--color-sombras);
+    color:var(--color-detalles);
+    transition: all 0.2s;
+    
+}
+
+                                /* SLIDER PORTADA */
+                                /* SLIDER PORTADA */
+                                /* SLIDER PORTADA */
+
+                                .ofertas {
+                                    width: 100%;
+                                    background: #fff;
+                                    margin: auto;
+                                    margin-top: 15px;
+                                    border-radius: 5px;
+                                    padding: 5px;
+                                    /*box-sizing: content-box;*/
+                                    box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.52);
+                                    overflow: hidden;
+                                    z-index:100;
+                                }
+
+                                /* Contenedor de los sliders */
+                                .slides-container {
+                                    display: flex;
+                                    width: 400%; 
+                                    animation: slide 20s infinite forwards;
+                                }
+
+                                /* Cada slider individual */
+                                .grid_slider {
+                                    display: grid;
+                                    grid-template-columns: 1fr 2fr;
+                                    align-items: center;
+                                    width: 400%; 
+                                }
+
+                                .col_slider1 {
+                                    height: 30vh;
+                                    margin: auto;
+
+                                }
+
+                                .col_slider1 img {
+                                    height: 100%;
+                                }
+
+
+                                .col_slider2 {
+                                    margin: auto;
+                                    display: flex;
+                                    flex-direction: column;
+                                }
+
+
+
+                                .slider_bebida_tipo{
+                                    font-weight: 700;
+                                    font-size: 1.6em;
+                                    color:#f00;
+                                }
+
+                            .slider_bebida_descripcion h2{
+                                margin-top:5px;
+                                font-weight: 800;
+                                font-size: 1.6em;
+                                color:var(--color-fondo-3);
+                        }
+
+                            .slider_bebida_precio {
+                                font-weight: 600;
+                                font-size: 1.3em;
+                                margin-top: 5px;
+                                margin-bottom: 3px;
+                                color:var(--color-textos);
+
+                            }
+
+
+                            
+                            .slider_bebida_comprar {
+                                margin:auto;
+                                font-weight: 500;
+                                font-size: 0.8em;
+                                padding:0px 5px 0px 5px;
+                                margin-top: 25px;
+                                background: #aaa8;
+                                color:var(--color-fondo);
+                                border-radius: 5px;
+                                width:200px;
+                            
+                            }
+
+                            .slider_bebida_comprar a{
+                                color:var(--color-fondo);
+                            }
+                                
+                                
+                            
+                                /* Animación para el contenedor de sliders */
+                                @keyframes slide {
+                                    0% {margin-left: 0;}
+                                    20% {margin-left: 0;}
+                                    
+                                    25% {margin-left: -100%;}
+                                    45% {margin-left: -100%;}
+                                    
+                                    50% {margin-left: -200%;}
+                                    70% {margin-left: -200%;}
+                                    
+                                    75% {margin-left: -300%;}
+                                    95%{margin-left: -300%;}
+                                }
+                        
+                            /* FIN ESTILOS SLIDER */
+
+
+
+/* TARJETAS FLEX DEBAJO DEL SLIDER */
+.contenedor_tarjetas{
+    box-sizing:border-box;
+    display: flex;
+    justify-content:space-between;
+    width: 100%;
+    margin: auto;
+
+
+
+}
+
+
+.tarjetas_portada{
+    border-radius:5px;
+    margin-top:20px;
+    width:30%;
+    background-color: var(--color-fondo-3);
+    /*border: 1px solid var(--color-fondo-2);*/
+}
+
+
+.tarjetas_portada:hover{
+    box-shadow: 1px 1px 10px 1px #ccc2;
+    cursor:pointer;
+
+
+}
+
+
+.tarjetas_portada h1,.titulo_tarjeta{
+    padding:15px 15px 0 15px;
+    color:#ddd;
+    font-weight: 600;
+}
+
+
+
+.tarjetas_portada h2{
+    padding:15px 15px 15px 15px;
+    color:var(--color-textos);
+    font-weight: 400;
+}
+
+
+.tarjetitas {
+    background: #1119;
+    color: black;
+    height: auto;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px 5px 0 0;
+
+}
+
+
+
+
+
+
+.img_home{
+    object-fit:cover;
+
+    height: 100px;
+    width: 100%;
+    border-radius:5px 5px 0px 0px;
+}
+
+
+/* FIN TARJETAS FLEX DEBAJO DEL SLIDER */
+
+
+/* body de página de Contacto */
+
+
+
+/* --- NOSOTROS.html ------*/
+/* --- NOSOTROS.html ------*/
+/* --- NOSOTROS.html ------*/
+
+.nosotros{
+    padding: 20px 0 20px; /*padding arriba y abajo */
+    margin:auto; /*centra la secciON */
+    min-width: 400px;
+    max-width: 1000px; /*ancho maximo de la seccion */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nosotros_container{
+    width: 95%;
+    background-color: var(--color-fondo-3);
+    padding: 25px;
+    margin:0px 0px 10px 0;
+    border-radius: 5px;
+    box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.52);
+}
+
+
+.nosotros_h1{
+    font-size:1.5em;
+}
+
+
+.nosotros_h2{
+    margin-top:10px;
+    font-size:1em;
+}
+
+
+.nosotros_h3{
+    margin-top:20px;
+    color:white;
+    font-size:1em;
+    font-weight: 400;
+}
+
+
+
+.nosotros_ul li {
+    color:white;
+    font-weight: 200;
+    margin:10px 0px 10px;
+}
+
+.nosotros_ul li::first-letter {
+    font-weight: 600;
+    
+}
+
+.integrantes{
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 300;
+    color:white;
+    padding:10px;
+}
+
+
+.card--nosotros{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+
+}
+
+
+.card--nosotros_child{
+    margin-top:15px;
+    
+    padding:20px;
+    height: auto;
+    background:#aaa1;
+    border-radius: 4px;
+    box-shadow: 0 0 3px 0 var(--color-fondo);
+}
+
+.card--nosotros_child h3{
+    margin:0;
+}
+.card--nosotros_child:hover .nosotros_h3 {
+    color:var(--color-detalles);}
+
+/* --- FIN NOSOTROS.html ------*/
+/* --- FIN NOSOTROS.html ------*/
+/* --- FIN NOSOTROS.html ------*/
+
+
+
+
+                    /*---- PRODUCTOS.HTML ----*/
+                    /*---- PRODUCTOS.HTML ----*/
+                    /*---- PRODUCTOS.HTML ----*/
+
+                    .bodyProduct{
+                        background-color: var(--color-fondo);
+                        color: var(--color-textos);
+                    }
+
+                    .banner{
+                        text-align: center;
+                        color: var(--color-sombras);
+                        height: 36vh;
+                        
+                        
+                    }
+                    .titleProduct{
+                        font-size: 2em;  
+                        margin-bottom:3px; 
+                        color:var(--color-sombras);
+                        text-align: center;
+                    }
+
+                    .leyenda_productos{
+                        color:white;
+                        text-align: center;
+                    }
+
+                    .banner img{
+                        width: 100%;
+                        height: 30vh;
+                        object-fit: cover; 
+                        object-position: center; 
+                        margin-bottom: 2rem;
+                    }
+
+                    .product{
+                    /* background-color: white;*/
+                        align-items: center;
+                        
+                    }
+
+                    .card{
+                        display: flex;
+                        gap: 20px;
+                        flex-wrap: wrap;
+                        justify-content: center;
+                        
+
+                    }
+
+                    .titleSection{
+                    padding: 2rem;
+                    font-size: 2rem;
+                    color: var(--color-textos);
+                    text-align: center;
+                    }
+
+                    .section-card{
+                        width:20rem ;
+                        height: 25rem;
+                        overflow: hidden;
+                        border-radius: 5px;
+                        background: white;
+                        box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.52);
+                    }
+
+
+
+                    .sinStock{
+                        position:absolute;
+                        
+                        width:20rem ;
+                        height: 25rem;
+                        overflow: hidden;
+                        border-radius: 5px;
+                        background: #ddd9;
+                        box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.52);
+                        text-align: center;
+                        padding-top:10em;
+                    }
+
+                    .sinStock__texto{
+                        color:red;
+                        font-size:3em;
+                        font-weight: 600;
+                        padding:5px 0px;
+                        transform: rotate(-40deg);
+                        text-shadow: 0px 0px 10px white;
+                        border-radius:5px;
+                    }
+
+
+
+                    .section-card:hover{
+                        color:var(--color-textos);
+                        cursor:pointer;   /*   border:1px solid var(--color-textos);*/
+                        box-shadow: 0px 0px 4px var(--color-textos);
+
+                    }
+
+
+                    .img-card{
+                        width: 100%;
+                        height: 80%;
+                        object-fit: cover;
+                    }
+                    .content-card{
+                        color: var(--color-fondo);
+                        text-align: center;
+                    }
+
+
+
+
+                    .title-card{
+                        padding: 0.5rem;
+                        white-space: nowrap; /* Evita el retorno de línea */
+                        overflow: hidden; /* Oculta el texto que excede el contenedor */
+                        text-overflow: ellipsis;
+                        color:var(--color-fondo);
+                    }
+
+                    .text-card{ 
+                        padding: 0.1rem;
+                        color: var(--color-textos);
+                    font-weight: 800;
+                    }
+
+                    /* ventana modal cuando se cliquea una bebida */
+
+                    .modal_background{
+                        width: 100%;
+                        height: 100vh;
+                        background: rgba(0,0,0,.8);
+                        position:fixed;
+                        display:none;
+                        opacity:0 ;
+                        z-index: 1000;
+                        align-items: center;
+                        justify-content: center;
+
+
+                    }
+
+                    .modal_ventana{
+                        width: 60%;
+                        min-width: 400px;
+                        min-height: 300px;
+                        background:white;
+                        border-radius: 5px;
+                        box-shadow: 0px 0px 10px 3px var(--color-fondo);
+                        display:grid;
+                        border:1px solid var(--color-detalles);
+                        grid-template-columns: 0.9fr 1.1fr; 
+                        position:relative;
+                    }
+
+                    .columna_izquierda{
+                        grid-column: 1;
+                        position:relative;
+                    }
+
+                    .columna_izquierda img{
+                    width: 100%;   
+                    min-height: 200px;
+                    }
+
+                    .columna_derecha{
+                        grid-column: 2;
+                        margin:10px 5px 0px 5px;
+                        text-align: center;
+                    }
+
+
+                    .columna_derecha_descripcion h2{
+                        margin-top:5px;
+                        font-weight: 700;
+                        font-size: 1.4em;
+                        color:var(--color-fondo-3);
+                    }
+
+                    .columna_derecha_precio{
+                        font-weight: 800;
+                        font-size: 1.9em;
+                        margin-top: 10px;
+                        margin-bottom: 5px;
+                        color:var(--color-textos);
+                        
+                    }
+
+                    .columna_derecha_categoria{
+                        font-weight: 300;
+                        font-size: 0.8em;
+                        padding:0px 5px 0px 5px;
+                        margin-top: 10px;
+                        margin-bottom: 5px;
+                        background: #aaa8;
+                        color:var(--color-fondo);
+                        display:inline;
+                        border-radius: 5px;
+                        
+                    }
+
+                    .columna_derecha_extras{
+                        font-weight: 400;
+                        font-size: .9em;
+                        margin-bottom: 10px;
+                        color:var(--color-fondo);
+                    }
+
+                    .columna_derecha_stock{
+                        font-weight: 300;
+                        font-size: 0.8em;
+                        padding:0px 5px 0px 5px;
+                        margin-top: 25px;
+                        background: #aaa8;
+                        color:var(--color-fondo);
+                        display:inline;
+                        border-radius: 5px;
+                        
+                    }
+
+                    .columna_derecha_cantidad{
+                        margin-top:15px;
+                    }
+
+                    .botones_cantidad{
+                        width:30px;    
+                        padding:5px;
+                        border:0;
+                        margin:10px;
+                        border-radius: 4px;
+
+                    }
+
+                    .cantidad{
+                        font-size: 1.3em;
+                        font-weight: 400;
+                    }
+
+                    .columna_derecha_total{
+                        font-weight: 400;
+                        width: 70%;
+                        font-size: 1.2em;
+                        padding:0px 5px 0px 5px;
+                        margin-top: 25px;
+                        color:var(--color-fondo);
+                        margin:auto;    
+                        border-radius: 5px;
+                        
+                    }
+
+                    .precio_total{
+                        font-weight: 500;
+                        font-size: 1.2em;
+                        
+                    }
+
+                    .boton-agregar-carrito{
+                        border-radius: 4px;
+                        background:#aaa8;
+                        padding:5px;
+                        border:0;
+                        border:0;
+                        font-weight: 600;
+                        width:60%;
+                        margin-top:15px;
+
+                    }
+                    .boton-agregar-carrito:hover,
+                    .botones_cantidad:hover{
+                    background: #bbb;
+                    }
+
+
+                    .boton-cerrar {
+                        position: absolute;
+                        top: 4px;
+                        right: 10px;
+                        cursor: pointer;
+                        padding:2px 5px 2px 5px;
+                        border-radius: 3px;
+                        background-color: #eee;
+                        border: 0.5px solid var(--color-fondo-2);
+                        font-size: 20px;
+                        color: var(--color-fondo);
+                        z-index: 1000;
+                    }
+
+                    /*---- FIN PRODUCTOS.HTML ----*/
+                    /*---- FIN PRODUCTOS.HTML ----*/
+                    /*---- FIN PRODUCTOS.HTML ----*/
+
+/* LOGIN y registro de usuario (se usan los estilos del form de contacto y aqui van algunas modif extras */
+/* LOGIN y registro de usuario (se usan los estilos del form de contacto y aqui van algunas modif extras */
+.login {
+    color: var(--color-textos);
+    cursor: pointer;
+    margin:2px 30px;
+    font-size: 35px;
+    /*display:inline-block;*/
+    /*margin-left: auto;*/
+    transition: all 0.3s;
+    color:var(--color-textos);
+}
+
+.login a{
+    color: var(--color-textos);
+    
+}
+
+.texto_login::after{
+    content:"Login/Registracion";
+}
+
+
+.login:hover {
+    color: var(--color-detalles);
+    cursor: pointer;
+    text-shadow: 2px 2px 15px var(--color-sombras);
+}
+
+.boton__registro{
+    
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0 0;
+        border-radius: 5px;
+        border: none;
+        background-color: var(--color-textos);
+        color: black;
+        text-align: center;
+        cursor: pointer;     
+    }
+    
+.requerimientos{ /*requisitos para contrasena */
+    color:yellow;
+    font-weight: 250;  
+    list-style-type:circle ;   
+}
+
+.req_contrasena{ /*las contraseñas no reune requisitos */
+    display:none;
+    color: white;
+
+}
+
+.register_button{ /*las contraseñas no reune requisitos */
+    display:none;
+
+}
+
+.req_iguales{ /*las contraseñas no coinciden */
+    display:none;
+    color: white;
+    font-weight: 250;  
+
+}
+
+.requerimientos .ok { /*clase que cambia color de los requisitos de contrasena */
+    color: white; 
+    
+}
+
+
+
+.requerimientos .ok::before { /*agrega tilde a los requisitos de contrasena */
+    content: '\2713';
+}
+
+.contacto__form p{
+    margin-top:5px;
+}
+
+.radio_container{
+margin:10px 0px;
+color:white;
+
+}
+.radio_label {
+    margin-right: 20px; /* Espacio entre el label y el radio button */
+   
+}
+
+
+
+
+.password_loss{
+    margin-top:20px;
+    font-weight: 200;
+}
+
+.password_loss a{
+    color:var(--color-textos);
+    font-weight: 300;
+}
+
+.password_loss a:hover{
+    color:var(--color-detalles);
+    font-weight: 300;
+}
+
+.register{
+    
+    padding:8px 0px;
+    border-bottom: 2px solid var(--color-textos);
+}
+
+.texto_registro{
+    margin:9px 0px;
+    color:white;
+    font-weight: 200;
+}
+
+.divisor{
+    margin-top:25px;
+    margin-bottom:25px;
+    border-bottom:3px solid var(--color-fondo);
+}
+
+
+
+/* CONTACTO.HTML */
+/* CONTACTO.HTML */
+/* CONTACTO.HTML */
+
+.bodyContacto{
+    background: var(--color-fondo);
+    color:var(--color-textos);
+}
+
+
+.contacto{
+    padding: 20px 0 20px; /*padding arriba y abajo de la seccion contacto */
+    margin: 0 auto; /*centra la seccion contacto */
+    max-width: 1000px; /*ancho maximo de la seccion contacto */
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+}
+
+.contacto__card{
+    background-color: var(--color-fondo-3);
+    width: 45%;
+    padding: 25px; 
+    border-radius: 5px;
+    box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.52);
+}
+
+.contacto__texto{
+    color: #ffffff;
+    margin: 1em 0em;
+}
+
+.contacto__texto a{
+    color: #ffffff;
+    text-decoration: none;
+    transition: all 0.5s;
+}
+
+.contacto__texto a:hover{
+    color: var(--color-textos);
+}
+
+.contacto__texto i{
+    color: var(--color-textos);
+}
+
+.contacto__card hr{
+    margin: 10px 0;
+    border: 1px solid var(--color-textos);
+}
+
+.contacto__form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.contacto__form__input{ 
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    border: none;
+}
+
+.contacto__form__input:first-child{ 
+    margin: 0px 0 5px;
+}
+
+.contacto__form__button{
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 0;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--color-textos);
+    color: black;
+    cursor: pointer;
+ 
+}
+
+
+/* carrito.html */
+
+
+.h2carrito{
+    margin-top:20px;
+    font-size: 1.5em;
+    color:var(--color-textos);
+    font-weight: 800;
+    text-align: center;
+}
+
+
+ .sumaTotal
+ {
+    display:none;
+    background: var(--color-fondo-2);
+    margin-top:20px;
+    font-size: 1.5em;
+    color:var(--color-textos);
+    font-weight: 800;
+    text-align: center;
+    width: 60%;
+    border-radius: 5px;
+    margin:auto;
+    margin-bottom: 50px;
+    box-shadow: 1px 1px 10px 2px var(--color-fondo-3);
+ }
+
+
+.tarjeta {
+    margin:auto;
+    margin-top:15px;
+    border:1px solid var(--color-fondo-2);
+    border-radius: 5px;
+    display: flex; /* Utilizamos flexbox para organizar los elementos */
+    align-items: center; /* Centramos verticalmente los elementos */
+    margin-bottom: 20px; /* Espacio entre tarjetas */
+    background: white;
+    width:60%;
+    color:#222;
+    height: 150px;
+  }
+  
+  .imagen-bebida {
+    width: 100px; 
+    height: auto; 
+    margin-right: 30px; 
+  }
+  
+  .descripcion {
+    flex-grow: 1;
+  }
+  
+  .descripcion p {
+    margin: 0; 
+  }
+  
+
+  .resaltado{
+    font-weight: 800;
+  }
+
+
+  .vacio{
+    font-weight: 900;
+    font-size: 2em;
+text-align: center;
+margin:60px 0px;
+padding:15px 0px;
+ }
+
+ .carita_triste{
+    font-weight: 200;
+    font-size:2.5em;
+    margin-bottom: 15px;
+ }
+
+ .text-vacio{
+    color:var(--color-sombras);
+    font-weight: 500;
+    font-size:1em;
+
+ }
+
+ .eliminar{
+    border-radius: 5px;
+    font-size: 0.7em;
+    padding:5px;
+    margin-top:3px;
+    border:0px;
+    background: var(--color-sombras);
+
+}
+
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background-color: #0f0;
+    border-radius: 50%;
+    margin-left: 5px;
+    position: relative;
+    top:-23px;
+    left:10px;
+    box-shadow: 0px 0px 5px 1px #000;
+}
+ 
+  /* fin carrito.html */
+
+
+
+
+/* estilos para cel */
+/* estilos para cel */
+/* estilos para cel */
+/* estilos para cel */
+
+@media only screen and (max-width:675px){ 
+
+    .bodyInicio{
+        grid-template-areas:
+        "encab"
+        "naveg"
+        "cuerp"
+        "cuerp"
+        "foote";
+        ;
+
+    }
+
+main{
+    width: 95vw;
+}
+
+
+.logo{
+    display: none;
+}
+    .titulo_sitio{
+        font-size:1.3em;
+        font-weight: 600;
+        margin:0; /*  titulo hacia la izquierda */
+        white-space: nowrap; /*evita que el titulo se ponga en 2 linas*/
+
+    }
+
+    .titulo_sitio::before{
+       /* content: "\1F4F1 ";*/
+    }
+
+/* login */ 
+    .login{
+        margin:0 10px;
+
+    }
+    .login:hover{ /*rotacion de la llavecita del login*/
+        transform: rotate(45deg);
+        
+    }
+
+
+    .texto_login::after{
+        content:"";
+    }
+
+
+    .navegacion_pc{ /*oculto barra de nav */
+        display:none;
+    }
+
+
+    .navegacion_mobile{
+        opacity: 0;
+    }
+
+
+    .visible {
+    opacity: 1; /* Establece la opacidad a 1 para mostrar el elemento */
+    }
+
+    .barra_nav{
+        display:block;
+
+    }
+
+    .boton_mobile_plus{ /* boton "+" para desplegar menu */
+        display:inline;
+    }
+
+    .boton_mobile_plus:hover{ 
+        cursor: pointer; 
+        /* rotacion boton "+"  */ 
+    /*   transform: rotate(45deg);
+        color:var(--color-detalles);
+        text-shadow: 2px 2px 15px var(--color-sombras);
+    */
+    }
+
+    .modal_ventana{
+        margin:auto;
+        grid-template-columns: 1fr;
+    height: 99vh;}
+
+        .columna_izquierda,
+        .columna_derecha {
+            grid-column: auto; /* Restablece el orden de las columnas */
+        }
+    
+        .columna_izquierda {
+            order: -1; /* Coloca la columna izquierda arriba */
+           
+        }
+
+        .columna_izquierda img{
+            
+        }
+
+        .columna_derecha_descripcion h2{
+            margin-top:5px;
+            font-weight: 700;
+            font-size: 1.2em;
+            color:var(--color-fondo-3);
+        }
+
+        .columna_derecha_precio{
+            font-weight: 800;
+            font-size: 1.6em;
+            margin-top: 5px;
+            margin-bottom: 3px;
+            color:var(--color-textos);
+            
+        }
+
+        .columna_derecha_cantidad{
+            margin-top:3px;
+
+        }
+        
+    .boton-agregar-carrito{
+        margin-bottom: 10px;
+    }        
+
+    .contacto{ /* cambia a columnas */
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contacto__card{ /* ancho de la tarjeta de contacto */
+        width: 90%;
+        margin: 5px 0;
+    }
+
+    .portada2{
+        flex-direction: column;
+    
+    }
+
+
+    .titleProduct{
+        font-size: 1.5em;
+    }
+.ofertas{
+    width: 90vw;
+    border-radius: 5px;
+    box-shadow:  1px 1px 2px 1px #0001;
+}
+
+
+
+.contenedor_tarjetas{
+    flex-direction: column;
+    width: 90vw;
+ 
+}
+
+.tarjetas_portada{
+    width: 100%;
+}
+
+
+
+
+.col_slider1 {
+    height: 20vh;
+}
+
+.slider_bebida_tipo{
+    font-size:0.8em;
+}
+
+ .slider_bebida_descripcion{
+    font-size: 0.7em;
+    font-weight: 900;
+ }
+
+ .slider_bebida_precio{
+    font-size: 0.9em;
+    font-weight: 700;
+ 
+ }
+
+
+.slider_bebida_comprar{
+    font-weight: 300;
+}
+
+.tarjeta{
+    font-size: 0.1em;
+    width: 80%;
+}
+
+.resaltado,.resaltado2{
+    font-size: 0.8em;
+}
+.sumaTotal{
+    width: 80%;
+    font-size:1.2em;
+    padding:10px;
+}
+}
+
+
+
+/*para tablet */
+/*para tablet */
+/*para tablet */
+/*para tablet */
+
+@media only screen and (min-width: 675px) and (max-width: 900px) { 
+    .bodyInicio{
+        grid-template-areas:
+        "encab"
+        "naveg"
+        "cuerp"
+        "cuerp"
+        "foote";
+    }
+    .titulo_sitio::before{
+       /* content: "\1F4FA ";*/
+    }
+
+    .tit{
+        font-size: 0.7em;
+    }
+    
+    .barra_nav{
+        white-space: nowrap; /*evita que el titulo se ponga en 2 linas*/
+    }
+
+    .barra_nav li{
+        padding:10px 15px;
+        
+    }
+
+
+    .contacto{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contacto__card{
+        width: 90%;
+        margin: 5px 0;
+    }
+
+
+
+    .contenedor_tarjetas{
+        flex-direction: column;
+        width: 95%;
+     
+    }
+    
+    .tarjetas_portada{
+        width: 100%;
+    }
+    
+    
+
+
+    .ofertas{
+        width: 95%;
+        border-radius: 5px;
+        box-shadow:  1px 1px 2px 1px #0001;
+    }
+    
+}
+
+
+
+
+
+
+@keyframes bkgnd_modal{
+    0%{
+        opacity:0; 
+    display:flex;
+   }
+
+   100%{
+    opacity:1; 
+    display:flex;
+}
+
+}
+ /*Footer*/
+footer{
+    
+    grid-area: foote;
+}
+.footerContainer{
+    width: 100%;
+}
+.socialIcons{
+    display: flex;
+    justify-content: center;
+}
+.socialIcons a{
+    text-decoration: none;
+    padding:  10px;
+    color:var(--color-textos);
+    margin: 10px;
+    border-radius: 50%;
+    
+}
+.socialIcons a i{
+    font-size: 2em;
+    
+    opacity: 0.9;
+}
+
+.socialIcons a:hover{
+    background-color:var(--color-fondo-2);
+    transition: 0.5s;
+}
+.footerBottom{
+    background-color:var(--color-fondo);
+    padding: 20px;
+    text-align: center;
+}
+.footerBottom p{
+    --color-fondo-2:#444;
+    font-size: x-small;
+}
+.footerp p{
+        text-align: center;
+       
+}
+
+/* Media Query para ajustes responsivos footer */
+@media (max-width: 700px) {
+    
+    .socialIcons a {
+        padding: 8px;
+    }
+
+    .socialIcons a i {
+        font-size: 1.5em;
+        
+    }
+    .footerp p {
+        font-size: 0.7em; 
+        
+    }
+    .footerBottom p{
+        font-size: 0.5; 
+        text-align: center;
+    
+    }
+    
+}
